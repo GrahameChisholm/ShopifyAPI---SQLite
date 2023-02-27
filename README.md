@@ -39,7 +39,7 @@ The result should be a table created with order, product and sales information f
 
       url = f"https://{store_name}.myshopify.com/admin/api/{api_version}/orders.json?status=any&created_at_min={start_date}"
       
-The above example changes the start date to 2 days ago. Once you ran the initial program to get YTD sales, you could set up a task scheduler to run this amended code daily to improve performance and automate uploads. 
+The above example changes the start date to 2 days ago. Once you've run the initial program to get YTD sales, you could set up a task scheduler to run this amended code daily to improve performance and automate uploads. 
 
 You can also amend the data you wish to load into the database by printing out the JSON data and amending the for loop with the desired data.
 
@@ -48,8 +48,14 @@ https://shopify.dev/docs/api/admin-rest/2022-10/resources/order#get-orders?statu
 
 Adjusting the parameters, you can filter certain feilds, date ranges, order status etc. 
 
-I use this program as part of an automated stock-reorder model in conjustion with inventory data that I pull from Shopify and purchased stock that I pull from Unleashed (WMS) API. The sales data provided informs sales trends that can be used to inform stock re-orders.
+I use this program as part of an automated stock-reorder model in conjunction with inventory data that I pull from Shopify and purchased stock that I pull from Unleashed (WMS) API. The sales data informs sales trends that can be used to forecast future stock positions and shape stock re-orders.
 
-You can also connect your database to Tableau to create live dashboards. 
+You can also connect your database to Tableau to create live dashboards. To do this please follow the steps outlined below:
+
+1. Open Tableau and click on "Connect to Data" on the start page.
+2. Select "SQLite" from the list of available data sources.
+3. Navigate to the location where your SQLite database is saved and select it.
+4. Tableau will automatically detect the tables in your database and display them in the left-hand pane.
+5. Select the tables you want to use to create your dashboard by dragging them onto the canvas.
 
 I hope you find this example useful and that it provides a base for you to start utilising Shopify's API. 
