@@ -12,6 +12,8 @@ To run this program the user will require a PC with the following programs, pack
 Python Download Link: https://www.python.org/downloads/
 SQLite Download Link: https://sqlitebrowser.org/dl/
 
+Please note that this program will only work for API versions from 2023 onwards.
+
 # Creating custom app in Shopify
 Go to: 
 https://{your-store-name}.myshopify.com/admin/settings/apps/development
@@ -26,7 +28,7 @@ Note down the API Access Token and API version (webhook version) keep these secu
 
 Save the file as a Python file and run the program in the command prompt. The program will prompt the user to enter their store name, access token and API version. 
 
-The program works by pulling JSON data from an API, bypassing Shopifys pagnation by linking through headers to create a list of order data. It then connects to SQLite to create a database, creating a table within that database called "order_data". The program then uses a for loop to parse the information in the orders list and pull out the deisred information, committing it to the data base. 
+The program works by pulling JSON data from an API, bypassing Shopifys pagnation by linking through headers to create a list of order data. It then connects to SQLite to create a database, creating a table within that database called "order_data". The program then uses a for loop to parse the information in the orders list and pull out the deisred information, committing it to the database. 
 
 # Results, limitations and use cases
 
